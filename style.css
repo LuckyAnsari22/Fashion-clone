@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+    margin: 0;
+    padding: 0;
+  }
+.div{
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    grid-template-rows: 26% 56% 18%;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+  }
+  
+  .top-left, .top-right, .left-center, .left-bottom, .right {
+    padding: 20px;
+  }
+  
+  .square img {
+    height: 30px;
+    width: 30px;
+  }
+  
+  .top-right {
+    justify-self: right;
+    text-align: right;
+  }
+  
+  .top-right h4, .left-center h1 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .left-center h1 {
+    font-size: 5vw;
+    text-transform: uppercase;
+    line-height: 6vw;
+  }
+  
+  .left-bottom p {
+    width: 70%;
+    font-size: 1.3vw;
+    font-weight: 500;
+    color: #666;
+  }
+  
+  .right {
+    grid-column: 3;
+    grid-row: 1 / 4;
+    padding-right: 10%;
+  }
+  
+  .right img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 3px;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: orangered;
+    color: #fff;
+    padding: 20px;
+    border-radius: 50%;
+  }
+  
+  .arrow i {
+    font-size: 35px;
+    font-weight: 100;
+  }
+  
+
+  @media (max-width: 600px) {
+    .div {
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 60px 30% 10% 50%;
+    }
+    .right {
+      grid-column: 1 / 4;
+      grid-row: 4;
+    }
+    .top-right h4, .top-right h5 {
+      display: none;
+    }
+    .top-right h6 {
+      display: initial;
+      font-size: 15px;
+    }
+    .left-center {
+      grid-column: 1 / 4;
+      margin-left: 60px;
+    }
+    .left-center h1 {
+      font-size: 9.5vw;
+      line-height: 11vw;
+    }
+    .left-bottom {
+      padding: 11px 5px;
+      align-content: center;
+    }
+    .left-bottom p {
+      width: 100%;
+      text-align: center;
+      font-size: 15px;
+    }
+    .right {
+      margin-left: 15px;
+    }
+    .arrow {
+      top: 47%;
+      left: 43%;
+      padding: 10px;
+      rotate: 90deg;
+    }
+    .arrow i {
+      font-size: 25px;
+    }
+  }
+  
+  @media (max-width: 420px) {
+    .left-center h1 {
+      font-size: 13vw;
+      line-height: 15vw;
+    }
+    .arrow {
+      top: 49%;
+      left: 44%;
+      padding: 5px;
+      rotate: 90deg;
+    }
+    .left-center {
+      margin-left: 40px;
+    }
+  }
